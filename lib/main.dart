@@ -1,22 +1,28 @@
 import 'package:flutter/material.dart';
-//import 'cultura_page.dart';
+import 'segundapag.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MainApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(//parte de cima // a faixa
       title: 'São Cristóvão e Névis',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor:  const Color.fromARGB(171, 255, 0, 0)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(171, 255, 0, 0),
+        ),
       ),
-      home: const MyHomePage(title: 'São Cristóvão e Névis 🇰🇳'),
-      debugShowCheckedModeBanner: false,//tira a faixa de debug
+      home: const MyHomePage(
+        title: 'São Cristóvão e Névis 🇰🇳',
+      ),
+      debugShowCheckedModeBanner: false,//tira a faixa do debug (amém!)
     );
   }
 }
@@ -34,9 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Colors.white,//muda o fundo
+
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: const Color.fromARGB(255, 255, 0, 0) ,
         title: Text(widget.title),
         centerTitle: true,
       ),
@@ -47,8 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.all(16),
             child: Column(
               children: [
-
-                // TÍTULO
                 const Text(
                   'História de São Cristóvão e Névis',
                   textAlign: TextAlign.center,
@@ -60,11 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 const SizedBox(height: 15),
 
-                // texto na caixa flutuante
                 const Card(
                   elevation: 5,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12),
+                    ),
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(16),
@@ -78,7 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 const SizedBox(height: 25),
 
-                // imagem com borda coloridaa
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(
@@ -86,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 4,
                     ),
                     borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.black26,
                         blurRadius: 10,
@@ -103,28 +108,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-                     /* const SizedBox(height: 25),
 
-                      ElevatedButton(
-                      onPressed: () {
-                      Navigator.push(
+                const SizedBox(height: 25),
+
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
-                      builder: (context) => const CulturaPage(),
+                        builder: (context) => const SegundaPag(),
                       ),
-                      );
-                      },
-                      style: ElevatedButton.styleFrom(
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(//deixa o botao mais bonito
                     backgroundColor: Colors.black,
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 12,
-                     ),
+                      horizontal: 20,
+                      vertical: 12,
                     ),
-                    child: const Text('Próxima página '),
-                  ),*/
-
+                  ),
+                  child: const Text('Próxima página'),
+                ),
               ],
             ),
           ),
