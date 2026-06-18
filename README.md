@@ -1,4 +1,4 @@
-# São Cristóvão e Neves 🇰🇳
+# São Cristóvão e Neves
 
 ## Integrantes
 
