@@ -28,16 +28,15 @@ Apresentar informações históricas e culturais sobre São Cristóvão e Neves 
 
 ## Sumário da Wiki
 
-# Home
+ - Home
+- 1. São Cristóvão e Neves
+   - 1.2 Roteiro
 
-* 1. São Cristóvão e Neves
-   * 1.2 Roteiro
-
-* 2. Introdução do Flutter
-   * 2.2 Página Inicial
-  * 2.3 Página Cultural
-   * 2.4 Widgets
-* 3. Referências
+- 2. Introdução do Flutter
+  - 2.2 Página Inicial
+  - 2.3 Página Cultural
+  - 2.4 Widgets
+- 3. Referências
 
 ## Link do Sumário
 
